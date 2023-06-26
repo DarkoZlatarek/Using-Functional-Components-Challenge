@@ -30,9 +30,9 @@ export class Content extends Component {
   }
 
   handleChange = (event) => {
-    const name = event.target.value
-    const filteredPosts = posts.filter(post => {
-      return post.toLowerCase().includes(name)
+    const name = event.target.value.toLowerCase()
+    const filteredPosts = savedPosts.filter(post => {
+      return post.name.toLowerCase().includes(name)
     })
     this.setState({
       posts: filteredPosts
